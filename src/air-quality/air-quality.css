@@ -1,0 +1,37 @@
+.air-quality {
+  width: 100vw;
+  height: 100vh;
+  background-color: #28282b;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.date-range {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  width: 100%;
+  align-items: center;
+}
+
+.date-pickers {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 2%;
+}
+
+.show-quality {
+  padding: 4%;
+  border: 1px dashed black;
+  border-radius: 3%;
+  background-color: #262e35;
+  color: white;
+}
+
+h2 {
+  margin-bottom: 5%;
+  text-align: center;
+}

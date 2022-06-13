@@ -7,8 +7,15 @@ import {
   CartesianGrid,
   Tooltip,
 } from "recharts";
+import { format } from "date-fns";
 
 const Graph = ({ data }) => {
+  const renderCustomAxisTick = ({ data }) => {
+    return data?.map((item) => format(item.date.local, "yyyy-MM-dd"));
+  };
+
+  const keyName = Object.keys(data[0].date)[1];
+
   return (
     <>
       <LineChart
@@ -23,7 +30,7 @@ const Graph = ({ data }) => {
         }}
       >
         <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey="value" />
+        <XAxis dataKey={keyName} tickFormatter={renderCustomAxisTick} />
         <YAxis />
         <Tooltip />
 
